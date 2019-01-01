@@ -1,0 +1,52 @@
+.player-entry {
+	padding:0px;
+	margin:0px;
+	background-color: #553333;
+}
+
+.score-list {
+	list-style-type: none;
+	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #333333;
+}
+
+.score-list > li {
+	float:left;
+	border-style: solid;
+	width:2em;
+	padding:0.5em;
+	margin:0.1em;
+}
+
+.player-button-box{
+	float: left;
+	width:80%;
+}
+
+.player-score-box {
+	float: right;
+	width:20%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.player-score {
+	text-align: center;
+	position:relative;
+	font-size:3em;
+  	top:50%;
+  	transform: translateY(50%);
+  	margin:0px;
+  	padding:0px;
+ 
+}
+
+.summary-section {
+	width:100%;
+	position: fixed;
+	bottom:0px;
+	background-color: #ffffff;
+}
