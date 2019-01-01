@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class ScoreButton extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	valueWithSign() {
 		if(this.props.value > 0) {
 			return "+" + this.props.value
@@ -22,9 +19,6 @@ class ScoreButton extends React.Component {
 }
 
 class PlayerEntry extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	render() {
 		return (
 			<div className = "player-entry">
