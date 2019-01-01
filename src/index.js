@@ -55,11 +55,7 @@ class PlayerEntry extends React.Component {
 class MutererGame extends React.Component {
 	constructor(props) {
 		super(props)
-		const startingScore = [0, 0, 0, 0];
-		this.state = {
-      		rounds: 1,
-      		scores: startingScore,
-      	};
+		this.state = this.getStartingState()
 	}
 
 	render() {
@@ -89,11 +85,26 @@ class MutererGame extends React.Component {
 		  		</div>
 		  		<div className ="summary-section">
 		  			<h3>Round {this.state.rounds} </h3>
-		  			<button>End round</button>
-		  			<button>Reset</button>
+		  			<button onClick = {() => this.endRound()}>End round</button>
+		  			<button onClick = {() => this.reset() }>Reset</button>
 		  		</div>
 		  	</div>
   		);
+	}
+
+	endRound() {
+		this.setState({rounds: this.state.rounds + 1})
+	}
+	getStartingState() {
+		const startingScore = [0, 0, 0, 0];
+		return {
+      		rounds: 1,
+      		scores: startingScore,
+      	};
+	}
+
+	reset() {
+      	this.setState(this.getStartingState());
 	}
 
 	changeScore(player, value) {
